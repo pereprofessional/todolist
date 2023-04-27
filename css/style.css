@@ -1,0 +1,296 @@
+﻿a {
+	color: #455C7B;
+	transition: color 250ms;
+}
+
+a:hover, a:focus, a:active {
+	color: #333;
+	text-decoration: none;
+}
+
+body {
+	height: 100vh;
+	min-height: 100vh;
+}
+
+header, footer {
+	background-color: #FFBC67;
+	color: #333;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	width: 100%;
+}
+
+footer {
+
+}
+
+header p, footer p {
+	margin: 0px;
+	padding: 0px;
+}
+
+.dashboard-entrance {
+	display: flex;
+	justify-content: end;
+}
+
+
+.workarea {
+	min-height: 100vh;
+	padding-top: 34px;
+	padding-bottom: 82px;
+	background-image: url(../images/ice-texture-long-min.jpg);
+	background-size: cover;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+
+
+.todo-item {
+	display: flex;
+	flex-direction: row;
+}
+
+.todo-item.created, .todo-item.edited {
+	background-color: #FFE66A;
+}
+
+.todo-item.done {
+	background-color: #47E699;
+}
+
+.todo-cell {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 20px;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+.cell-name {
+	width: 220px;
+	flex-direction: column;
+}
+
+.todo-cell .user-email {
+	font-size: 14px;
+	font-weight: bold;
+	margin-top: -5px;
+}
+
+.todo-cell .user-edited {
+	font-size: 14px;
+	font-style: italic;
+	margin-top: -5px;
+}
+
+.cell-text {
+	line-height: 1;
+	width: 690px;
+	justify-content: left;
+}
+
+.cell-dependency {
+	width: 200px;
+	flex-direction: column;
+}
+
+.cell-dependency span, .cell-dependency button {
+	text-align: center;
+	line-height: 1;
+	margin-bottom: 5px;
+	margin-top: 5px;
+}
+
+.cell-dependency button {
+	border: 1px solid #479FFF;
+	color: #479FFF;
+	padding: 0px;
+	width: 100px;
+	text-align: center;
+	padding-left: 10px;
+	padding-right: 10px;
+	display: block;
+	margin-bottom: 2px;
+	margin-top: 5px;
+	padding-top: 3px;
+	padding-bottom: 3px;
+	cursor: pointer;
+	outline: none;
+	background-color: #FFF;
+	transition: background 250ms, color 250ms, border 250ms;
+}
+
+.cell-dependency button:hover {
+	background-color: #479FFF;
+	color: #FFF;
+	border-color: #479FFF;
+}
+
+.task-status {
+	font-weight: bold;
+}
+
+.authorization {
+	background-color: #FFF;
+	box-shadow: 2px 4px 15px rgba(0,0,0,0.3);
+	border: 1px solid rgba(0,0,0,0.1);
+	border-radius: 15px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 15px;
+	max-width: 400px;
+	margin: 0 auto;
+	margin-top: 20px;
+	flex-direction: column;
+}
+
+form.auth_user {
+	width: 300px;
+}
+
+.auth-field {
+	display: flex;
+	flex-direction: column;
+}
+
+.auth-field label {
+	padding: 0px;
+	margin: 0px;
+	margin-top: -5px;
+}
+
+.auth-field {
+	margin-bottom: 10px;
+}
+
+.auth-error {
+	margin-left: 5px;
+	font-size: 14px;
+	color: #BB0000;
+}
+
+.action-logout {
+	margin-top: 10px;
+	outline: 0;
+	cursor: pointer;
+	border: 0px;
+	padding: 0px;
+	background: none;
+	color: #455C7B;
+    transition: color 250ms;
+
+}
+
+.action-logout:hover, .action-logout:focus, .action-logout:active {
+	color: #333;
+	outline: 0;
+}
+
+.add-task {
+
+	border: 1px solid #FA5623;
+    color: #FA5623;
+    padding: 0px;
+    text-align: center;
+    padding-left: 10px;
+    padding-right: 10px;
+    display: block;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    cursor: pointer;
+    outline: none;
+    background-color: #FFF;
+	margin-bottom: 10px;
+    transition: background 250ms, color 250ms, border 250ms;
+}
+
+.add-task:hover {
+	background-color: #FA5623;
+    color: #FFF;
+    border-color: #FA5623;
+}
+
+.add-task:focus, .add-task:active {
+	outline: none;
+}
+
+.popup-editor {
+	position: fixed;
+	left: 0px;
+	top: 0px;
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.popup-editor .bg {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.5);
+}
+
+.popup-editor .frame {
+	position: relative;
+	padding: 25px;
+	background-color: #FFF;
+	box-shadow: 2px 4px 15px rgba(0,0,0,0.3);
+    border: 1px solid rgba(0,0,0,0.1);
+    border-radius: 15px;
+    z-index: 2;
+}
+
+.popup-editor .field {
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 5px;
+}
+
+.popup-editor .field label {
+	margin: 0px;
+}
+
+.popup-editor .field input {
+	width: 400px;
+}
+
+.popup-editor input[type=submit] {
+	margin-top: 5px;
+}
+
+.add-task-form-error, .edit-task-form-error {
+	margin-left: 5px;
+	color: #BB0000;
+}
+
+.pagination {
+	margin-top: 10px;
+}
+
+.pagination a {
+	display: inline-block;
+	width: 20px;
+}
+
+.pagination a.active {
+	font-weight: bold;
+	cursor: default;
+}
+
+.sort {
+	
+}
+
+.sort a {
+	margin-right: 10px;
+}
